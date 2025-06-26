@@ -28,9 +28,9 @@ def item_base(lines, split=' ', mode=0):
             line = list(map(float, line))
             result.append(line)
     """
-    mode 0: all nums, each line has the same len.
-    mode 1: all nums, the lines have different lens.
-    mode 2: has str, return a list [[],[],...,[],[]]
+    mode 0: all numbers; each line has the same length.
+    mode 1: all numbers; the lines may have different lengths.
+    mode 2: includes strings and returns a list [[], [], ..., []].
     """
     if mode == 0:
         return np.asarray(result).reshape(n, -1, 2)
